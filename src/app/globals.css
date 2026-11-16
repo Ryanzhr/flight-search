@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5f8fb;
+  --foreground: #0b1f33;
+  --accent: #1a9cb0;
+  --warm: #d4892a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+::selection {
+  background: rgba(26, 156, 176, 0.25);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hero-veil {
+  background:
+    linear-gradient(
+      105deg,
+      rgba(7, 17, 28, 0.88) 0%,
+      rgba(11, 31, 51, 0.72) 42%,
+      rgba(11, 31, 51, 0.35) 70%,
+      rgba(11, 31, 51, 0.18) 100%
+    ),
+    linear-gradient(to top, rgba(7, 17, 28, 0.55), transparent 40%);
+}
+
+.value-ring {
+  background: conic-gradient(
+    from 210deg,
+    #1a9cb0 0%,
+    #e2a84a var(--score, 70%),
+    rgba(255, 255, 255, 0.12) var(--score, 70%)
+  );
+}
